@@ -1,0 +1,38 @@
+<style>
+  h1 {text-align: center;}
+  </style>
+    <section class="mt-5">
+      <div class="container">
+        <div class="table-responsive">
+          <div class="titulo__">
+            <h1>Lista de Propostas de Estágio</h1> 
+          </div>
+          <table class="table table-striped table-dark">
+            <thead class="thead-light text-center">
+              <tr>
+                <th class="sub_titulo">ID</th>
+                <th class="sub_titulo">Título</th>
+                <th class="sub_titulo">Status</th>
+                <th class="sub_titulo">Ver Detalhes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let x of propostas.results">
+                <td class="text-center w-20">{{x.id}}</td>
+                <td class="text-center w-25">{{x.titulo}}</td>
+                <td class="text-center w-25"> 
+                  <div>
+                      <div class="badge badge-success" *ngIf="x.aprovada === true">Proposta Aprovada</div>
+                      <div class="badge badge-warning" *ngIf="x.aprovada === false">Proposta não aprovada</div>
+                  </div>
+                </td>
+                <td class="text-center w-20"><button type="button" class="btn btn-primary mr-2" 
+                  [routerLink]="['/detalhes-estagio/', x.id]" >
+                      Detalhes</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>

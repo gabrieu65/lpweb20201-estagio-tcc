@@ -8,9 +8,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HomeInicioComponent } from './home-inicio/home-inicio.component';
 import { PropostasDeTCCComponent } from './propostas-de-tcc/propostas-de-tcc.component';
 import { PropostaDeTCCComponent } from './proposta-de-tcc/proposta-de-tcc.component';
+import { PropostaDeEstagioComponent } from './proposta-de-estagio/proposta-de-estagio.component';
+import { DetalhesEstagioComponent } from './detalhes-estagio/detalhes-estagio.component';
 
 
 const routes: Routes = [
+  { path: 'detalhes-estagio/:id', component: DetalhesEstagioComponent },
+  { path: 'propostas-de-estagio', component: PropostaDeEstagioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'sobre', component: SobreComponent },
