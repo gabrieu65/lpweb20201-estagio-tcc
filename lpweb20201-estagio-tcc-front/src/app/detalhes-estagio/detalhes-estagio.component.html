@@ -15,7 +15,7 @@
       <p class="list-group-item" class="p-3 mb-2 bg-secondary text-white" *ngIf="proposta.aprovada === false">Proposta não aprovada</p>
     <p class="text-primary"><strong>Aprovado em</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.aprovada_em }}</p>
     <p class="text-primary"><strong>Orientador</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.orientacao.professor.funcionario.nome}}</p>
-    <p class="text-primary"><strong>Comentário Avaliação</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.avaliacoes.ID}}</p>
+    <p class="text-primary"><strong>Comentário Avaliação</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.avaliacoes[0].comentario}}</p>
   </ul>
 </div>
 </nav>
