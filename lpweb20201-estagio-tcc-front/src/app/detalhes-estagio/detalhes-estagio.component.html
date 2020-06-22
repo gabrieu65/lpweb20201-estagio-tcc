@@ -7,15 +7,15 @@
   <h2 >{{proposta.titulo}}</h2>
   <ul class="list-group">
     <p class="text-primary"><strong>Cadastrado em</strong></p><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.cadastrado_em}}</p>
-    <p class="text-primary"><strong>Cadastrado em</strong></p><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.atualizado_em}}</p>
+    <p class="text-primary"><strong>Atualizado em</strong></p><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.atualizado_em}}</p>
     <p class="text-primary"><strong>Conceitos</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.conceitos}}</p>
     <p class="text-primary"><strong>Resultados Esperados</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.resultados_esperados}}</p>
-    <p class="text-primary"><strong>Aprovado ?</strong><li class="list-group-item" class="p-3 mb-2 bg-secondary text-white">
-        <div *ngIf="proposta.aprovada === true">Proposta Aprovada</div>
-        <div *ngIf="proposta.aprovada === false">Proposta não aprovada</div>
-    </li>
+    <p class="text-primary"><strong>Aprovado ?</strong>
+      <p class="list-group-item" class="p-3 mb-2 bg-secondary text-white" *ngIf="proposta.aprovada === true">Proposta Aprovada</p>
+      <p class="list-group-item" class="p-3 mb-2 bg-secondary text-white" *ngIf="proposta.aprovada === false">Proposta não aprovada</p>
     <p class="text-primary"><strong>Aprovado em</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.aprovada_em }}</p>
     <p class="text-primary"><strong>Orientador</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.orientacao.professor.funcionario.nome}}</p>
+    <p class="text-primary"><strong>Comentário Avaliação</strong><p class="list-group-item" class="p-3 mb-2 bg-secondary text-white">{{proposta.avaliacoes.ID}}</p>
   </ul>
 </div>
 </nav>
